@@ -1,21 +1,31 @@
 ---
-// Welcome to Astro! Everything between these triple-dash code fences
-// is your "component frontmatter". It never runs in the browser.
-console.log('This runs in your terminal, not the browser!');
+import Card from '../components/Card.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Greeting from '../components/Greeting';
+import Social from '../components/Social.astro';
+const pageTitle = "Home Page";
 ---
-<!-- Below is your "component template." It's just HTML, but with
-    some magic sprinkled in to help you build great templates. -->
-<a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/blog/">Blog</a>    
+<BaseLayout pageTitle={pageTitle}>
+ <div class="layout">
+    <aside class="sidebar left">
+      <Card title="Card Izquierda 1"> 
+        <img src="/astro.svg" alt="Logo" class="logo" />
+        <Social platform="github" username="crigarher" />
+      </Card>
+      <Card title="Card Izquierda 2">Contenido de la izquierda 2</Card>
+      <Card title="Card Izquierda 3">
+        
+       
+      </Card>
+    </aside>
 
-<html>
-  <body>
-    <h1>Hello, World!</h1>
-  </body>
-</html>
-<style>
-  h1 {
-    color: orange;
-  }
-</style>
+    <aside class="sidebar right">
+      <Card title="Card Derecha 1">Contenido de la derecha 1</Card>
+      <Card title="Card Derecha 2">Contenido de la derecha 2</Card>
+      <Card title="Card Derecha 2">Contenido de la derecha 3</Card>
+       
+    </aside>
+  </div>
+  
+  
+</BaseLayout>

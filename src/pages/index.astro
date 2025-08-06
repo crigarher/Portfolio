@@ -4,13 +4,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting';
 import Social from '../components/Social.astro';
 const pageTitle = "Home Page";
+import Portrait from '../assets/Portrait.png';
 ---
 <BaseLayout pageTitle={pageTitle}>
  <div class="layout">
     <aside class="sidebar left">
-      <Card title="Card Izquierda 1"> 
-        <img src="/astro.svg" alt="Logo" class="logo" />
+      <Card> 
+        <img src={Portrait.src} alt="Portrait" class="portrait" />
         <Social platform="github" username="crigarher" />
+        <Social platform="linkedin" username="in/cristina-garcía-hernández"/>
       </Card>
       <Card title="Card Izquierda 2">Contenido de la izquierda 2</Card>
       <Card title="Card Izquierda 3">

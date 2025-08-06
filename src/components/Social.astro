@@ -1,6 +1,7 @@
 ---
 const { platform, username } = Astro.props;
-import githubMark from '../assets/github-mark.png'; 
+
+
 ---
 <a href={`https://www.${platform}.com/${username}`} target="_blank" rel="noopener noreferrer">
   {platform === "github" && (
@@ -19,6 +20,19 @@ import githubMark from '../assets/github-mark.png';
       />
     </svg>
   )}
+  {platform === "linkedin" && (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+    style="vertical-align: middle;"
+  >
+    <path d="M4.98 3.5C4.98 4.60457 4.08457 5.5 2.98 5.5C1.87543 5.5 0.98 4.60457 0.98 3.5C0.98 2.39543 1.87543 1.5 2.98 1.5C4.08457 1.5 4.98 2.39543 4.98 3.5ZM0.5 8.5H5.5V24H0.5V8.5ZM8.5 8.5H13.2V10.528C13.8721 9.33158 15.2087 8.5 16.8857 8.5C21.1943 8.5 22 11.1914 22 15.0561V24H17V15.9444C17 13.9153 16.5536 12.5 14.9994 12.5C13.4453 12.5 13 13.9153 13 15.9444V24H8.5V8.5Z" />
+  </svg>
+)}
+
 </a>
 
 <style>
